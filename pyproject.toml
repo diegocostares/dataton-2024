@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "dataton-2024"
+version = "0.1.0"
+description = ""
+authors = ["Diego Costa"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+altair = "5.3.0"             # Herramienta de visualización de datos declarativa basada en Vega y Vega-Lite
+vegafusion = "^1.6.7"        # Integración para utilizar Vega y Vega-Lite en Python
+attrs = "23.2.0"             # Facilita la creación de clases y manejo de atributos
+certifi = "2024.2.2"          # Provee certificados SSL para HTTPS
+charset-normalizer = "3.3.2" # Ayuda a detectar la codificación de caracteres de textos
+click = "8.1.7"              # Crea interfaces de línea de comandos (CLI) de forma sencilla
+click-plugins = "1.1.1"      # Extensión para Click para soportar plugins
+cligj = "0.7.2"              # CLI para trabajar con GeoJSON
+cloudpickle = "3.0.0"        # Serializa objetos de Python para su uso en distribución o persistencia
+contourpy = "1.2.0"          # Genera contornos y trazos para visualización de datos
+cycler = "0.12.1"            # Herramienta para crear ciclos de estilos en gráficos
+cytoolz = "0.12.3"           # Funcionalidades de alto rendimiento para manipular datos
+dask = "2024.2.0"            # Permite computación paralela y distribuida en Python
+et-xmlfile = "1.1.0"          # Interfaz de bajo nivel para xml para uso con openpyxl
+fiona = "1.9.5"               # Lector y escritor de datos vectoriales espaciales
+fonttools = "4.49.0"         # Biblioteca para manipular fuentes
+fsspec = "2024.2.0"          # Interfaz para sistemas de archivos
+idna = "3.6"                 # Soporta el protocolo IDNA (Internationalized Domain Names in Applications)
+joblib = "1.3.2"             # Herramientas para pipelining en Python, especialmente para trabajar con datos pesados
+kiwisolver = "1.4.5"         # Solucionador de restricciones eficiente
+line-profiler = "4.1.2"       # Perfilador de líneas para Python
+locket = "1.0.0"             # Bloqueo de archivos
+matplotlib = "3.8.3"         # Biblioteca de gráficos 2D
+numpy = "1.26.4"             # Soporte para arrays y matrices grandes y multidimensionales
+openpyxl = "3.1.2"           # Lee/escribe archivos Excel 2010 xlsx/xlsm/xltx/xltm
+pandas = "2.2.0"             # Estructuras de datos y análisis de datos
+partd = "1.4.1"              # Almacenamiento basado en archivos para estructuras de datos de pandas
+pillow = "10.2.0"            # Fork de PIL, biblioteca de imágenes de Python
+pooch = "1.8.1"              # Gestiona la descarga de archivos de datos
+pyarrow = "15.0.0"           # Integración con Apache Arrow, framework de datos en columna
+pyparsing = "3.1.1"          # Generador de analizadores sintácticos (parsers) no basado en gramáticas
+pyproj = "3.6.1"             # Interfaz de Python para PROJ (manejo de proyecciones cartográficas)
+pytz = "2024.1"              # Trabaja con zonas horarias en Python
+pyyaml = "6.0.1"             # YAML parser y emitter para Python
+requests = "2.31.0"          # Facilita hacer solicitudes HTTP
+scikit-learn = "1.4.1.post1" # Herramientas simples y eficientes para análisis predictivo de datos
+scipy = "1.12.0"             # Biblioteca para matemáticas, ciencia e ingeniería
+seaborn = "0.13.2"           # Visualización de datos estadísticos
+shapely = "2.0.3"            # Manipulación y análisis de objetos geométricos
+threadpoolctl = "3.4.0"      # Controla el tamaño de threadpools en bibliotecas de terceros
+toolz = "0.12.1"             # Colección de funciones de utilidad para iterables, funciones y diccionarios
+tqdm = "4.66.2"              # Barras de progreso rápidas y extensibles para loops
+tzdata = "2024.1"            # Datos de zona horaria de la base de datos IANA
+urllib3 = "2.2.1"            # Potente, con muchas características para trabajar con HTTP
+xgboost = "2.0.3"            # Biblioteca de optimización basada en gradientes
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "configs",
+    ".github",
+    ".githooks",
+    ".vscode",
+]
+
+[tool.ruff.lint]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+select = ["A", "B", "C", "E", "F", "W", "I"]
+ignore = [
+    "B904",
+    "B008",
+    "F841",
+    "F401",
+    "E302",
+    "E305",
+    "F403",
+    "F405",
+    "I001",
+]
+pydocstyle.convention = "google"
+mccabe.max-complexity = 10
+
+[tool.black]
+line-length = 99
+target-version = ['py310']
+preview = true
